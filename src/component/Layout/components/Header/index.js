@@ -21,6 +21,37 @@ import Menu from '~/component/Popper/Menu';
 
 const cx = classNames.bind(styles);
 
+const MENU_ITEMS = [
+    {
+        icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        title: 'Vietnamese',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'cn',
+                    title: 'Chinese',
+                },
+            ],
+        },
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        title: 'Feedback and help',
+        to: '/feedback',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        title: 'Keyboard shortcuts',
+    },
+];
+
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
     useEffect(() => {
@@ -29,21 +60,10 @@ function Header() {
         }, 0);
     }, []);
 
-    const MENU_ITEMS = [
-        {
-            icon: <FontAwesomeIcon icon={faEarthAsia} />,
-            title: 'Vietnamese',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faCircleQuestion} />,
-            title: 'Feedback and help',
-            to: '/feedback',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faKeyboard} />,
-            title: 'Keyboard shortcuts',
-        },
-    ];
+    // Handle menu
+    const handleMenuChange = (menuItem) => {
+        // console.log(menuItem);
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -80,7 +100,7 @@ function Header() {
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
