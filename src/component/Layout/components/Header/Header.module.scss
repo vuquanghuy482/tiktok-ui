@@ -79,6 +79,9 @@
 }
 
 .search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--search-bottom-width);
     height: 100%;
     border-top-right-radius: var(--border-search-radius);
@@ -110,11 +113,30 @@
 }
 
 .action-btn {
+    position: relative;
+    display: flex;
     background-color: transparent;
     color: #161823;
     cursor: pointer;
     font-size: 2.2rem;
-    padding: 4px 12px;
+    padding: 4px 10px;
+}
+
+// Num notification
+
+.num-noti {
+    position: absolute;
+    height: 2rem;
+    top: -3px;
+    right: 0px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    padding: 0px 6px;
+    border-radius: 10px;
+    font-family: 'IBM Plex Sans', 'san-serif';
 }
 
 .user-avatar {
