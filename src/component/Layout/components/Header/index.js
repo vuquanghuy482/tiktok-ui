@@ -127,7 +127,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/07c2b080eabf890e7d90e2de0eebd206~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=0261ded2&x-expires=1745161200&x-signature=nr5OJZI%2F8ra8r7eOh%2FGqKBL6PTE%3D&t=4d5b0474&ps=13740610&shp=30310797&shcp=c1333099&idc=my"
+                                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/ff30629f9f83fa7d426de60ac1eef464~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=fb8ec891&x-expires=1745506800&x-signature=igzoekOa7fLNqwgEJqiQOvph%2FHs%3D&t=4d5b0474&ps=13740610&shp=30310797&shcp=c1333099&idc=my"
                                 alt="Vũ Quang Huy"
                                 // fallback="https://fullstack.edu.vn/assets/f8-icon-lV2rGpF0.png"
                             />
