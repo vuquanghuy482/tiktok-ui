@@ -11,13 +11,12 @@ const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
 function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
-
     const [history, setHisory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
     const renderItem = () => {
         return current.data.map((item, index) => {
-            const isParent = !!item.children;            
+            const isParent = !!item.children;
 
             return (
                 <MenuItem
@@ -52,11 +51,11 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                                 }}
                             />
                         )}
-                        {renderItem()}
+                        <div className={cx('menu-body')}>{renderItem()}</div>
                     </PopperWrapper>
                 </div>
             )}
-            onHide={() => setHisory(prev => prev.slice(0, 1))}
+            onHide={() => setHisory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
